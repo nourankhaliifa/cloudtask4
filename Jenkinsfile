@@ -14,13 +14,13 @@ pipeline {
 
         stage('Install Firebase Tools') {
             steps {
-                sh 'npm install -g firebase-tools'
+                bat 'npm install -g firebase-tools'
             }
         }
 
         stage('Deploy to Firebase') {
             steps {
-                sh "firebase deploy --token $FIREBASE_TOKEN"
+                bat "firebase deploy --token $FIREBASE_TOKEN"
             }
         }
     }
